@@ -3,17 +3,17 @@ import './App.css';
 import About from './about';
 import Gears from './gears';
 import Home from './home';
+import Project from './project';
 
 function App() {
 
   const [rotation, setRotation] = useState(0);
-  
+
   useEffect(() => {
-  
+
     const handleScroll = () => {
-      const scrollPosition = (window.scrollY/10);
+      const scrollPosition = (window.scrollY / 10);
       setRotation(scrollPosition);
-      console.log(window.scrollY)
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -24,11 +24,12 @@ function App() {
   }, []);
 
   return (
-<>
-<Gears rotation={rotation}/>
-<Home rotation={rotation/3}/>
-<About rotation={rotation/3}/>
-</>
+    <>
+      <Gears rotation={rotation} />
+      <Home rotation={rotation / 3} />
+      <About rotation={rotation / 3} />
+      <Project rotation={rotation} />
+    </>
   );
 }
 

@@ -14,3 +14,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@media (max-width: 1600px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (min-width: 1600px) {
+  html {
+    font-size: 14px;
+  }
+}
