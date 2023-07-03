@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
-
 
 function Gears(props: { rotation: number }) {
+
+  function Fourty() {
+    if (props.rotation >= 40) return (-props.rotation)+40;
+    return 0
+}
+
   return (
-    <div className="Gears">
+    <div  className="Gears " style={{left:Fourty()}}>
 
 
       <img width={296} style={{ top: 24, right: -88, transform: `rotate(${props.rotation}deg)` }} src="Gear 1.svg" alt="Gear 1" />

@@ -5,11 +5,15 @@ function About(props: { rotation: number }) {
         if (props.rotation <= 40) return props.rotation / 50;
         return 100
     }
+    function Fourty() {
+        if (props.rotation >= 60) return props.rotation ;
+        return 60
+    }
 
     return (
 
-        <div className="About" >
-            <div className="heading" style={{ opacity:  Hundred() }}>
+        <div className="About" style={{ left: `${Fourty()}vw` }}>
+            <div className="heading" style={{ opacity: Hundred() }}>
                 <h1>Education background</h1>
 
                 <p>Bachelor of Engineering in Mechanical<br /> Engineering, Mutah<br />
@@ -19,7 +23,7 @@ function About(props: { rotation: number }) {
                 <p>Diploma in UI/UX Design, LTUC<br /> Expected Completion: Jan 2024</p>
                 <a>And more than 10 certificate of completion
                     from</a>
-                    <img src="edu.png" style={{marginTop:70}}/>
+                <img src="edu.png" style={{ marginTop: 70 }} />
             </div>
         </div>
     );
